@@ -1,17 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .products-page {
     position: relative;
     width: 100%;
@@ -203,6 +189,8 @@ input:focus {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
 }
 
 .products-page .product-wrapper .no-data {
@@ -221,8 +209,8 @@ input:focus {
 
 .products-page .products .product-card {
     margin-top: 40px;
-    margin-right: 24px;
-    width: 270px;
+    width: calc(25% - 35px);
+    min-width: 220px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -231,9 +219,10 @@ input:focus {
 
 .products-page .products .product-card .product-img {
     position: relative;
-    width: 273px;
-    height: 275px;
+    width: 100%;
+    height: 220px;
     background-size: cover;
+    background-position: center;
     border-radius: 0px 50px 0px 0px;
 }
 
@@ -285,43 +274,42 @@ input:focus {
 .products-page .products .shop-btn {
     position: absolute;
     padding: 20px;
-    top: 217px;
-    width: 64px;
-    height: 46px;
-    left: 105px;
+    bottom: 15px;
+    left: 15px;
+    width: 45px;
+    height: 45px;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
     z-index: 3;
     opacity: 0;
     transition: opacity 0.5s ease;
-    background: rgb(198 0 255 / 66%);
+    background: rgba(198, 0, 255, 0.66);
     border: 2px solid #d7b686;
-    border-radius: 10px;
+    border-radius: 50%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 10px;
     line-height: 15px;
     color: #f8f8ff;
-
 }
 
 .products-page .products .view-btn {
     position: absolute;
     bottom: 15px;
+    right: 15px;
     padding: 5px;
-    min-width: 40px;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
     z-index: 5;
     opacity: 0;
-    transition: opcity 0.5s ease;
+    transition: opacity 0.5s ease;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 50%;
 }
@@ -344,6 +332,11 @@ input:focus {
     opacity: 1;
 }
 
+.products-page .products .shop-btn:hover,
+.products-page .products .view-btn:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
 
 .products-page .products .address {
     width: 100%;
